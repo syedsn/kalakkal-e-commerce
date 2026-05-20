@@ -3,7 +3,7 @@ import "./CategorySection.css";
 import fashion from "../assets/categories/fashion.png";
 import accessories from "../assets/categories/accessories.png";
 import toys from "../assets/categories/toys.jpg";
-import gifts from "../assets/categories/gifts.jpg";
+import gifts from "../assets/categories/gifts.png";
 import wellness from "../assets/categories/wellness.png";
 import offers from "../assets/categories/offers.png";
 
