@@ -1,0 +1,135 @@
+.offer-section {
+  width: calc(100% - 50px);
+  /* max-width: 1220px; */
+  margin: 0 auto 38px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  font-family: "Roboto", sans-serif;
+}
+
+.offer-card {
+  height: 155px;
+  border-radius: 14px;
+  padding: 28px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+}
+
+.offer-card.blue {
+  background: linear-gradient(110deg, #eef6ff 0%, #eef6ff 100%);
+}
+
+.offer-card.cream {
+  background: linear-gradient(110deg, #fff8ef 0%, #fff8ef 100%);
+}
+
+.offer-content {
+  position: relative;
+  z-index: 2;
+}
+
+.offer-card h3 {
+  margin: 0 0 8px;
+  font-size: 25px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.offer-card.blue h3 {
+  color: #0969c8;
+}
+
+.offer-card.cream h3 {
+  color: #ff6b12;
+}
+
+.offer-card p {
+  margin: 0 0 22px;
+  font-size: 15px;
+  color: #111827;
+  font-weight: 500;
+}
+
+.offer-card button {
+  height: 34px;
+  padding: 0 22px;
+  border-radius: 999px;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.offer-card.blue button {
+  border: 1.5px solid #ff6b12;
+  color: #ff6b12;
+}
+
+.offer-card.cream button {
+  border: 1.5px solid #0969c8;
+  color: #0969c8;
+}
+
+.offer-card button:hover {
+  background: #ff6b12;
+  color: #ffffff;
+  border-color: #ff6b12;
+}
+
+.offer-card img {
+  width: 170px;
+  height: 135px;
+  object-fit: contain;
+  position: absolute;
+  right: 18px;
+  bottom: 4px;
+}
+
+.offer-card:nth-child(3) img {
+  width: 155px;
+  height: 145px;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .offer-section {
+    /* width: calc(100% - 32px); */
+    grid-template-columns: 1fr;
+  }
+
+  .offer-card {
+    height: 165px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .offer-section {
+    width: calc(100% - 24px);
+    gap: 16px;
+  }
+
+  .offer-card {
+    height: 145px;
+    padding: 22px;
+  }
+
+  .offer-card h3 {
+    font-size: 21px;
+  }
+
+  .offer-card p {
+    font-size: 13px;
+    max-width: 170px;
+  }
+
+  .offer-card img {
+    width: 130px;
+    height: 120px;
+    right: 8px;
+  }
+}

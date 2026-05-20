@@ -1,0 +1,165 @@
+.menu-wrapper {
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #edf0f5;
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  z-index: 40;
+}
+
+.menu-bar {
+  height: 58px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 34px;
+  display: flex;
+  align-items: center;
+  gap: 55px;
+}
+
+.shop-category {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #003b8f;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.menu-item {
+  height: 58px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  color: #111827;
+  white-space: nowrap;
+}
+
+.menu-item > span {
+  transition: 0.25s;
+}
+
+.menu-item:hover > span {
+  color: #ff6b12;
+}
+
+.mega-menu {
+  position: absolute;
+  top: 58px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 70px);
+  max-width: 1220px;
+  min-height: 360px;
+  background: #ffffff;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr) 190px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: 0.25s ease;
+  border-top: 3px solid #ff6b12;
+  z-index: 100;
+}
+
+.menu-item:hover .mega-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.mega-col {
+  padding: 26px 22px;
+  background: #ffffff;
+}
+
+.mega-col.gray {
+  background: #f4f6f9;
+}
+
+.mega-col h4 {
+  margin: 0 0 16px;
+  font-size: 15px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.mega-col p {
+  margin: 0 0 13px;
+  font-size: 14px;
+  color: #374151;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.mega-col p:hover {
+  color: #ff6b12;
+  padding-left: 4px;
+}
+
+.mega-col b {
+  background: #ff4b55;
+  color: #ffffff;
+  font-size: 10px;
+  padding: 4px 8px;
+  border-radius: 20px;
+  margin-left: 6px;
+}
+
+.mega-banner {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mega-banner img {
+  width: 155px;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 6px 6px 0 0;
+}
+
+.mega-banner div {
+  width: 155px;
+  background: #ff6b12;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 800;
+  text-align: center;
+  padding: 16px 8px;
+  border-radius: 0 0 6px 6px;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .menu-bar {
+    overflow-x: auto;
+    gap: 28px;
+    padding: 0 18px;
+  }
+
+  .mega-menu {
+    display: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .menu-bar {
+    height: 52px;
+    gap: 24px;
+    padding: 0 14px;
+  }
+
+  .shop-category,
+  .menu-item {
+    font-size: 14px;
+  }
+}
